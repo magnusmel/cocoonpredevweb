@@ -8,6 +8,22 @@ var bodyParser = require('body-parser');
 var index = require('./routes/index');
 var users = require('./routes/users');
 
+// Initialize Firebase
+
+var firebase = require("firebase");
+var config = {
+       apiKey: "AIzaSyAIDIENgEL14c_mLv2nVzNkRuZeX77XLBE",
+       authDomain: "cocoonpredev.firebaseapp.com",
+       databaseURL: "https://cocoonpredev.firebaseio.com",
+       projectId: "cocoonpredev",
+       storageBucket: "cocoonpredev.appspot.com",
+       messagingSenderId: "463065205424"
+     };
+firebase.initializeApp(config)
+
+
+
+
 var app = express();
 
 // view engine setup
